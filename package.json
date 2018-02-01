@@ -1,0 +1,65 @@
+{
+  "name": "ettn-fv",
+  "description": "ETTN with feathers.js and vue.js",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Yaroslav Shamatienko",
+    "email": "ShamatienkoYaroslav@users.noreply.github.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^9.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "DEBUG=nuxt:* nodemon --watch src/ --watch config/ src/index.js",
+    "prestart": "npm run build",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "start": "NODE_ENV=production node src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.1",
+    "@feathersjs/authentication-jwt": "^2.0.0",
+    "@feathersjs/authentication-local": "^1.1.0",
+    "@feathersjs/configuration": "^1.0.1",
+    "@feathersjs/errors": "^3.2.2",
+    "@feathersjs/express": "^1.1.2",
+    "@feathersjs/feathers": "^3.0.5",
+    "@feathersjs/socketio": "^3.0.2",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "element-ui": "^2.0.11",
+    "feathers-errors": "^2.9.2",
+    "feathers-nedb": "^3.0.0",
+    "helmet": "^3.9.0",
+    "nedb": "^1.8.0",
+    "nuxt": "^1.2.1",
+    "serve-favicon": "^2.4.5",
+    "string": "^3.3.3",
+    "vue-awesome": "^2.3.4",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "mocha": "^4.0.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.11",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "sass-loader": "^6.0.6",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
